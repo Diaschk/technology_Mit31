@@ -6,7 +6,6 @@ terraform {
       version = "~> 5.0"
     }
   }
-}
 
   backend "s3" {
     bucket         = "lab-my-tf-state1"          
@@ -15,11 +14,11 @@ terraform {
     dynamodb_table = "lab-my-tf-lockid"         
     encrypt        = true                       
   }
+}
 
 provider "aws" {
   region = "eu-north-1"  
 }
-
 
 resource "aws_security_group" "lab_sg" {
   name        = "lab-security-group2"
