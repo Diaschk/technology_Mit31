@@ -8,6 +8,14 @@ terraform {
   }
 }
 
+  backend "s3" {
+    bucket         = "lab-my-tf-state1"          
+    key            = "terraform.tfstate"        
+    region         = "eu-north-1"               
+    dynamodb_table = "lab-my-tf-lockid"         
+    encrypt        = true                       
+  }
+
 provider "aws" {
   region = "eu-north-1"  
 }
