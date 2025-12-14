@@ -67,7 +67,7 @@ resource "aws_instance" "lab_server" {
   vpc_security_group_ids = [aws_security_group.lab_sg.id]
 
 
-  key_name = "c2-key-pair"  
+  key_name = "ec2-key-pair"  
 
   tags = {
     Name    = "Lab-MIT31"
