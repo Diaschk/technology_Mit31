@@ -14,7 +14,7 @@ provider "aws" {
 
 
 resource "aws_security_group" "lab_sg" {
-  name        = "lab-security-group"
+  name        = "lab-security-group1"
   description = "Security group for lab application"
 
   ingress {
