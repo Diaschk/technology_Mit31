@@ -8,8 +8,9 @@ class FlaskAppTests(unittest.TestCase):
     def test_get_hello_endpoint(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.get_data(), b'Hello world from app pipeline testing.')
+        self.assertEqual(response.get_data(), b'Hello world from app Pipeline testing.')
 
 if __name__ == '__main__':
     unittest.main()
+
 
