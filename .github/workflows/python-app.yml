@@ -66,8 +66,9 @@ jobs:
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v3
 
+    # ЗМІНА ТУТ: fmt замість fmt -check (автоматично виправить форматування)
     - name: Terraform Format
-      run: terraform fmt -check
+      run: terraform fmt
 
     - name: Terraform Init
       run: terraform init
